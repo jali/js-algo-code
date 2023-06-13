@@ -41,6 +41,7 @@ class LinkedList {
             return oldTail.data
         }
     }
+    // search node by item
     search(item) {
         if (this.size === 0) { return null }
         let curr = this.head
@@ -53,6 +54,7 @@ class LinkedList {
         }
         return null
     }
+    // insert new data at a position of an item 
     insert(data, current) {
         let currNode = this.search(current)
         let prevNode = currNode.prev
