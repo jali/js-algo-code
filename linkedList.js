@@ -14,7 +14,7 @@ class LinkedList {
     }
     // append
     push(val) {
-        if(!this.tail) {
+        if (!this.tail) {
             this.head = this.tail = new Node(val)
         } else {
             const oldTail = this.tail
@@ -28,7 +28,7 @@ class LinkedList {
     // get and delete tail
     pop() {
         const oldTail = this.tail
-        if(!this.tail) {
+        if (!this.tail) {
             return null
         } else {
             if(this.head === this.tail) {
@@ -42,7 +42,7 @@ class LinkedList {
         }
     }
     search(item) {
-        if(this.size === 0) { return null }
+        if (this.size === 0) { return null }
         let curr = this.head
         while (curr) {
             if (curr.data === item) {
@@ -68,7 +68,7 @@ const sll = new LinkedList()
 sll.push(1)
 sll.push(2)
 sll.push(3)
-
+console.log(sll)
 
 // console.log(sll)
 // console.log('----------------')
@@ -81,6 +81,5 @@ sll.push(3)
 // console.log('search 13 = ',sll.search(13))
 // console.log('----------------')
 // console.log('insert 23 ==> ', sll.insert(23, 2))
-sll.insert(2222, 2)
-console.log(sll)
+// sll.insert(2222, 2)
 // console.log('search 2222 = ', sll.search(2222))
