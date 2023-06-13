@@ -1,1 +1,1 @@
-### algorithm code examples and challenges in javascript
+## algorithm code and challenges in javascript
