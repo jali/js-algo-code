@@ -24,8 +24,8 @@ B.left = C
 const depthFirstPrint = (root) => {
     if (root === null) return
     console.log(root.val)
-    if (root.left !== null) depthfirstprint(root.left)
-    if (root.right !== null) depthfirstprint(root.right)
+    if (root.left !== null) depthFirstPrint(root.left)
+    if (root.right !== null) depthFirstPrint(root.right)
 }
 console.log('dfs')
 depthFirstPrint(A)
