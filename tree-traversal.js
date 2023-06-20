@@ -21,30 +21,30 @@ B.left = C
 //        /
 //       C
 
-const depthfirstprint = (root) => {
+const depthFirstPrint = (root) => {
     if (root === null) return
     console.log(root.val)
     if (root.left !== null) depthfirstprint(root.left)
     if (root.right !== null) depthfirstprint(root.right)
 }
 console.log('dfs')
-depthfirstprint(A)
+depthFirstPrint(A)
 
-const breadthfirstprint = (root) => {
+const breadthFirstPrint = (root) => {
     const queue = [ root ]
-    while(queue.length > 0) {
+    while (queue.length > 0) {
         const curr = queue.shift()
         console.log(curr.val)
-        if(curr.left !== null) {
+        if (curr.left !== null) {
             queue.push(curr.left)
         } 
-        if(curr.right !== null) {
+        if (curr.right !== null) {
             queue.push(curr.right)
         }
     }
 }
 console.log('bfs')
-breadthfirstprint(A)
+breadthFirstPrint(A)
 
 const breadthFirstSearch = (root, target) => {
     const queue = [ root ]
@@ -53,10 +53,10 @@ const breadthFirstSearch = (root, target) => {
         if (curr.val === target) {
             return true
         }
-        if(curr.left !== null) {
+        if (curr.left !== null) {
             queue.push(curr.left)
         } 
-        if(curr.right !== null) {
+        if (curr.right !== null) {
             queue.push(curr.right)
         }
     }
