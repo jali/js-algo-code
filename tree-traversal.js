@@ -48,7 +48,7 @@ breadthFirstPrint(A)
 
 const breadthFirstSearch = (root, target) => {
     const queue = [ root ]
-    while(queue.length > 0) {
+    while (queue.length > 0) {
         const curr = queue.shift()
         if (curr.val === target) {
             return true
