@@ -10,16 +10,13 @@ function solution(N) {
     let oneEnd = false;
     let binGapTemp = 0;
     let binGapMax = 0;
-    
     const binArr = binStr.split('');
-
     for (i=0; i<binArr.length; i++){
-            
-        if(!oneEnd && binArr[i] === '0') {
+        if (!oneEnd && binArr[i] === '0') {
             binGapTemp++;
         }
         
-        if(binArr[i] === '1') {
+        if (binArr[i] === '1') {
             if (oneStart && binGapTemp > 0){
                 oneEnd = true;
             } else {
@@ -28,7 +25,7 @@ function solution(N) {
             }
         }
 
-        if(oneEnd) {
+        if (oneEnd) {
             if(binGapTemp > binGapMax) {
                 binGapMax = binGapTemp;
             }
