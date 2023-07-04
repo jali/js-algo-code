@@ -26,7 +26,7 @@ function solution(N) {
         }
 
         if (oneEnd) {
-            if(biGapTemp > biGapMax) {
+            if (biGapTemp > biGapMax) {
                 biGapMax = biGapTemp;
             }
             biGapTemp = 0;
