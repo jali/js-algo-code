@@ -4,20 +4,20 @@ function solution(N) {
     // 100%
     // write your code in JavaScript (Node.js 8.9.4)
 
-    const binStr = N.toString(2);
-
+    const biStr = N.toString(2);
+    console.log('binary string for', N, ':', biStr)
     let oneStart = false;
     let oneEnd = false;
-    let binGapTemp = 0;
-    let binGapMax = 0;
-    const binArr = binStr.split('');
-    for (i=0; i<binArr.length; i++){
-        if (!oneEnd && binArr[i] === '0') {
-            binGapTemp++;
+    let biGapTemp = 0;
+    let biGapMax = 0;
+    const biArr = biStr.split('');
+    for (i = 0; i < biArr.length; i++){
+        if (!oneEnd && biArr[i] === '0') {
+            biGapTemp++;
         }
         
-        if (binArr[i] === '1') {
-            if (oneStart && binGapTemp > 0){
+        if (biArr[i] === '1') {
+            if (oneStart && biGapTemp > 0){
                 oneEnd = true;
             } else {
                 oneStart = true;
@@ -26,15 +26,17 @@ function solution(N) {
         }
 
         if (oneEnd) {
-            if(binGapTemp > binGapMax) {
-                binGapMax = binGapTemp;
+            if(biGapTemp > biGapMax) {
+                biGapMax = biGapTemp;
             }
-            binGapTemp = 0;
+            biGapTemp = 0;
             oneEnd = false; 
         }
     }
-    return binGapMax;
+    return biGapMax;
 }
-console.log(solution(587910));
-
-// test numbers 561892 74901729 1376796946 1073741825
+console.log('Result:', solution(7));
+console.log('Result:', solution(561892));
+console.log('Result:', solution(587910));
+console.log('Result:', solution(1376796946));
+console.log('Result:', solution(1073741825));
