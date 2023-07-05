@@ -3,7 +3,6 @@ function solution(N) {
     // in the binary representation of N
     // 100%
     // write your code in JavaScript (Node.js 8.9.4)
-
     const biStr = N.toString(2);
     console.log('binary string for', N, ':', biStr)
     let oneStart = false;
@@ -15,7 +14,6 @@ function solution(N) {
         if (!oneEnd && biArr[i] === '0') {
             biGapTemp++;
         }
-        
         if (biArr[i] === '1') {
             if (oneStart && biGapTemp > 0){
                 oneEnd = true;
@@ -24,7 +22,6 @@ function solution(N) {
                 oneEnd = false;
             }
         }
-
         if (oneEnd) {
             if (biGapTemp > biGapMax) {
                 biGapMax = biGapTemp;
