@@ -33,6 +33,6 @@ const bs = (array, target, left, right) => {
     return bs(array, target, mid+1, right)
 }
 
-let a = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-console.log('found at index', binarySearch(a,17))
+const a = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+console.log('found at index', binarySearch(a, 17))
 console.log('found at index recursively', bs(a, 17, 0, a.length-1))
