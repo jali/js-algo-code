@@ -1,5 +1,6 @@
 // From a list of numbers, move zero to the end of the list.
 
+// solution recursive
 const examine = (orginaList=[], resultList=[], zeroList=[]) => {
     if (orginaList.length === 0) return [...resultList, ...zeroList];
     
