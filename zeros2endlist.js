@@ -1,14 +1,14 @@
 // From a list of numbers, move zero to the end of the list.
 
 // solution recursive
-const examine = (orginaList=[], resultList=[], zeroList=[]) => {
-    if (orginaList.length === 0) return [...resultList, ...zeroList];
+const examine = (remainder=[], numbers=[], zeros=[]) => {
+    if (remainder.length === 0) return [...numbers, ...zeros];
     
-    let niedle = orginaList.pop();
+    let niedle = remainder.pop();
     if (niedle === 0) {
-        return examine(orginaList, resultList, [...zeroList, niedle])
+        return examine(remainder, numbers, [...zeros, niedle])
     } else {
-        return examine(orginaList, [niedle, ...resultList], zeroList)
+        return examine(remainder, [niedle, ...numbers], zeros)
     }
 }
 let result = examine([1,0,2,0,4,6]);
