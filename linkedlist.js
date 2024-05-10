@@ -5,7 +5,6 @@ class Node {
         this.prev = prev || null
     }
 }
-
 class LinkedList {
     constructor() {
         this.head = null
@@ -69,6 +68,7 @@ class LinkedList {
 const sll = new LinkedList()
 sll.push(1)
 sll.push(2)
+sll.push(3)
 sll.push(3)
 console.log(sll)
 console.log('----------------')
