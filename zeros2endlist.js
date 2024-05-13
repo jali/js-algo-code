@@ -4,7 +4,7 @@
 //   time complexity calculation
 //   traversing => O(N)
 //   pop => O(1) 
-//   spread operator => O(N)
+//   appending using spread operator => O(1)
 //   result => O(N)
 //
 // recursive function
