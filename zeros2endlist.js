@@ -8,16 +8,16 @@
 //   result => O(N)
 //
 // recursive function
-const examine = (tail=[], numbers=[], zeros=[]) => {
+const solution = (tail=[], numbers=[], zeros=[]) => {
     if (tail.length === 0) return [...numbers, ...zeros];
     
     let head = tail.pop();
     if (head === 0) {
-        return examine(tail, numbers, [...zeros, head])
+        return solution(tail, numbers, [...zeros, head])
     } else {
-        return examine(tail, [head, ...numbers], zeros)
+        return solution(tail, [head, ...numbers], zeros)
     }
 };
 
-let result = examine([1,0,2,0,4,6]);
+let result = solution([1,0,2,0,4,6]);
 console.log(result);
